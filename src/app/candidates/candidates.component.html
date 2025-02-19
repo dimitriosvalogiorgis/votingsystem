@@ -1,0 +1,10 @@
+<div layout="row" style="display:flex;justify-content:center;align-items:center;height:100%;width:100%; gap:3rem; flex-wrap:wrap">
+<div style="display:flex; flex-direction:column; gap:2rem">
+  <ng-container *ngFor="let candidate of selectedCounty; let i=index">
+    <mat-checkbox [disabled]="count==3 && truthy[i]==false" (change)="log($event,i)" style="color:white">{{candidate}}</mat-checkbox>
+    </ng-container>
+    <button mat-raised-button (click)="vote()">Vote</button>
+    <button mat-raised-button (click)="back()">Go back</button>
+</div>
+</div>
+
